@@ -1,0 +1,24 @@
+[Collection:RamCustomisedPayment]
+        Type    : Vouchers:VoucherType
+        Child Of: $$VchTypePayment
+        Belongs To:Yes
+        Fetch:Vouchernumber,Date,Vouchertypename,PArtyledgername,Narration
+        
+
+;Select $Vouchernumber,$Date,$Vouchertypename,$PArtyledgername,$Narration from RamCustomisedRpt
+ 
+
+[Collection:RamCustomisedRpt]
+        Type    : Vouchers:VoucherType
+        Child Of: $$VchTypeReceipt
+        Belongs To:Yes
+        Fetch:Vouchernumber,Date,Vouchertypename,PArtyledgername,Narration.
+        
+
+
+[Collection:Alltypes]
+    
+Collection:RamCustomisedPayment,RamCustomisedRpt
+
+
+;Select $Vouchernumber,$Date,$Vouchertypename,$PArtyledgername,$Narration from Alltypes
